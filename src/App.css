@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  background-color: antiquewhite;
+  min-height: 100vh;
+}
+.image-container {
+  display: flex;
+  justify-content: space-around;
+}
+.image {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+}
+.main-heading {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: rgb(49, 153, 153);
+  padding: 30px;
+  text-decoration: underline;
+}
+.choice {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: rgb(50, 48, 181);
+}
+.name {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: rgb(48, 181, 132);
+  padding: 30px;
+}
+.result {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  color: rgb(48, 181, 132);
+}
