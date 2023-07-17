@@ -1,7 +1,18 @@
+.my-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(219, 210, 199);
+}
 .App {
   text-align: center;
   background-color: antiquewhite;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   min-height: 100vh;
+  width: 500px;
+  margin: 10px;
+  border-radius: 10px;
 }
 .image-container {
   display: flex;
@@ -11,23 +22,34 @@
   height: 150px;
   width: 150px;
   margin: 10px;
+  filter: hue-rotate(180deg);
+  border-radius: 20px;
 }
 .main-heading {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: rgb(49, 153, 153);
   padding: 30px;
+  font-size: 30px;
   text-decoration: underline;
 }
 .choice {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: rgb(50, 48, 181);
+  font-size: 20px;
 }
 .name {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: rgb(48, 181, 132);
   padding: 30px;
+  font-size: 20px;
 }
 .result {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   color: rgb(48, 181, 132);
+  font-size: 20px;
+}
+.score {
+  font-size: 10px;
+  color: cornflowerblue;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }

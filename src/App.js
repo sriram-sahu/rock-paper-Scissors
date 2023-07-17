@@ -91,47 +91,49 @@ function App() {
   };
 
   return (
-    <div className='App'>
-      <h1 className='main-heading'>Rock Paper Scissor</h1>
-      <div>
-        <p>Your Score : {yourScore}</p>
-        <p>Computer Score : {computerScore}</p>
-      </div>
-      {yourChoice === "" ? (
+    <div className='my-container'>
+      <div className='App'>
+        <h1 className='main-heading'>Rock Paper Scissor</h1>
         <div>
-          <h1 className='choice'>Choose one :</h1>
+          <p className='score'>Your Score : {yourScore}</p>
+          <p className='score'>Computer Score : {computerScore}</p>
+        </div>
+        {yourChoice === "" ? (
+          <div>
+            <h1 className='choice text-warning'>Choose one :</h1>
+            <div className='image-container'>
+              {choices.map((each) => (
+                <div key={each.id} onClick={() => onUserChoice(each.choice)}>
+                  <img src={each.url} className='image' />
+                  <h1 className='result'>{each.choice}</h1>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : (
           <div className='image-container'>
-            {choices.map((each) => (
-              <div key={each.id} onClick={() => onUserChoice(each.choice)}>
-                <img src={each.url} className='image' />
-                <h1>{each.choice}</h1>
-              </div>
-            ))}
-          </div>
-        </div>
-      ) : (
-        <div className='image-container'>
-          <div>
-            <h1 className='choice'>Your Choice</h1>
-            <img src={userChoices[yourChoice]} className='image' />
-            <h1 className='name'>{yourChoice}</h1>
-          </div>
-          <div>
-            <h1 className='choice'>Computer Choice</h1>
-            <img src={computerChoice.url} className='image' />
-            <h1 className='name'>{computerChoice.choice}</h1>
-          </div>
-        </div>
-      )}
-      <div>
-        {result !== "" && (
-          <div>
-            <h1 className='result'>{result}</h1>
-            <button className='btn btn-primary' onClick={restartGame}>
-              Retry
-            </button>
+            <div>
+              <h1 className='choice'>Your Choice</h1>
+              <img src={userChoices[yourChoice]} className='image' />
+              <h1 className='name'>{yourChoice}</h1>
+            </div>
+            <div>
+              <h1 className='choice'>Computer Choice</h1>
+              <img src={computerChoice.url} className='image' />
+              <h1 className='name'>{computerChoice.choice}</h1>
+            </div>
           </div>
         )}
+        <div>
+          {result !== "" && (
+            <div>
+              <h1 className='result'>{result}</h1>
+              <button className='btn btn-primary' onClick={restartGame}>
+                Retry
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
